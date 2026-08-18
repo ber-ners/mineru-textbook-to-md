@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment and credentials
+.env*
+!.env.example
+*.pem
+*.key
+credentials*.json
+service-account*.json
+
+# Source documents and generated runtime artifacts
+*.pdf
+**/full.md
+**/00-MinerU原始分块/
+**/00-*.json
+**/00-*.md
+**/images/
+.trash/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Test and coverage artifacts
+.coverage
+coverage.xml
+htmlcov/
+*.whl

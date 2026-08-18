@@ -1,0 +1,9 @@
+include CHANGELOG.md
+include CODE_OF_CONDUCT.md
+include CONTRIBUTING.md
+include RELEASING.md
+include SECURITY.md
+include SKILL.md
+include run-local-mineru.ps1
+recursive-include agents *.yaml
+recursive-include references *.md

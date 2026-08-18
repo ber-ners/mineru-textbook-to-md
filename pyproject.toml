@@ -1,0 +1,52 @@
+[project]
+name = "mineru-textbook-to-md"
+dynamic = ["version"]
+description = "Convert structured PDFs and MinerU output into ordered, reviewable Markdown packages."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "ber-ners" }]
+requires-python = ">=3.10"
+keywords = ["mineru", "pdf", "markdown", "ocr", "textbook"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Markup",
+]
+dependencies = [
+  "pypdf>=4",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "ruff>=0.6",
+  "twine>=5",
+]
+
+[project.scripts]
+mineru-textbook-to-md = "mineru_textbook_to_md.cli:run"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "mineru_textbook_to_md.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["mineru_textbook_to_md*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
