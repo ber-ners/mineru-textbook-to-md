@@ -12,5 +12,6 @@ python -m twine check dist/*
 ```
 
 3. Install the built wheel in a clean environment and run `mineru-textbook-to-md --version`.
-4. Create an annotated tag such as `v0.1.0` and publish a GitHub Release with the generated wheel and source archive.
-5. Publish to PyPI only after configuring trusted publishing for the repository.
+4. Build the Agent Skill bundle with `./scripts/build-skill-bundle.ps1 -Version <version>`.
+5. Create an annotated tag such as `v0.1.1` and publish a GitHub Release with `mineru-textbook-to-md-skill-v<version>.zip`.
+6. Keep wheel/source archives optional developer artifacts; they are not the primary Skill distribution.

@@ -1,4 +1,4 @@
 interface:
-  display_name: "MinerU Textbook to Markdown"
-  short_description: "Split MinerU textbooks into reviewable Markdown"
-  default_prompt: "Use $mineru-textbook-to-md to convert this authorized textbook PDF into chapter Markdown."
+  display_name: "MinerU Textbook Markdown Skill"
+  short_description: "Convert textbook PDFs into ordered Markdown chapters"
+  default_prompt: "Use $mineru-textbook-to-md to convert this authorized textbook PDF into reviewable Markdown with images and chapter reports."

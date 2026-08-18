@@ -1,8 +1,10 @@
 <div align="center">
 
-# MinerU Textbook to Markdown
+# MinerU Textbook Markdown Skill
 
-将结构化 PDF 转换为保留图文、按章节排序、可人工复核的 Markdown 文档包。
+一个面向 Agent 的 Skill：将结构化 PDF 转换为保留图文、按章节排序、可人工复核的 Markdown 文档包。
+
+本仓库的核心入口是 `SKILL.md`，不是 Python 包。底层 Python 代码作为 Skill 的内置运行资源提供。
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-f2c94c?style=flat-square)
@@ -23,18 +25,20 @@
 
 > 当前版本为 `0.1.0`，适合试用和协作开发。正式处理重要文档前，请先使用 `--plan-only` 和 `--dry-run` 检查结果。
 
-## 安装
+## 安装 Skill
 
-要求 Python 3.10 或更高版本。
+将整个仓库放入 Agent 的 Skill 目录，例如：
 
-```bash
-python -m pip install .
+```text
+$CODEX_HOME/skills/mineru-textbook-to-md/
 ```
 
-开发安装：
+也可以直接下载 GitHub Release 中的 `mineru-textbook-to-md-skill-v*.zip` 并解压到该目录。
 
-```bash
-python -m pip install -e ".[dev]"
+运行时要求 Python 3.10 或更高版本。首次使用时安装 Skill 依赖：
+
+```powershell
+python -m pip install -r "<skill-root>\requirements.txt"
 ```
 
 配置 MinerU Token：
@@ -51,28 +55,22 @@ export MINERU_OFFICIAL_API_TOKEN="sk-..."
 
 ## 使用
 
-先读取书签并生成上传计划，不上传 PDF：
+通过 Skill 自带入口运行，不依赖固定路径：
 
-```bash
-mineru-textbook-to-md --pdf /path/to/book.pdf --plan-only
+```powershell
+python "<skill-root>\scripts\run.py" --pdf "<pdf>" --plan-only
 ```
 
 确认计划后解析并拆分：
 
 ```bash
-mineru-textbook-to-md --pdf /path/to/book.pdf --split-by auto
-```
-
-不安装命令行入口时，也可以运行：
-
-```bash
-python -m mineru_textbook_to_md --pdf /path/to/book.pdf --split-by auto
+python "<skill-root>/scripts/run.py" --pdf /path/to/book.pdf --split-by auto
 ```
 
 拆分已有 `full.md`，先预览边界：
 
 ```bash
-mineru-textbook-to-md \
+python "<skill-root>/scripts/run.py" \
   --from-full-md /path/to/full.md \
   --page-count 500 \
   --dry-run
@@ -91,7 +89,7 @@ mineru-textbook-to-md \
 | `--force` | 显式替换冲突的 PDF/full.md，并重新生成 MinerU 缓存 |
 | `--direct-download` | 仅下载 MinerU 结果时绕过系统代理 |
 
-运行 `mineru-textbook-to-md --help` 查看全部参数。
+运行 `python "<skill-root>/scripts/run.py" --help` 查看全部参数。
 
 ## 输出
 
@@ -134,7 +132,7 @@ mineru-textbook-to-md \
 ## 开发
 
 ```bash
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev]"  # 仅开发者需要；普通 Skill 使用者安装 requirements.txt 即可
 python -m unittest discover -s tests -v
 python -m ruff check mineru_textbook_to_md tests
 python -m build

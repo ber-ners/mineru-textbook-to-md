@@ -329,7 +329,7 @@ class ChapterPlannerTests(unittest.TestCase):
             errors="replace",
         )
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("0.1.0", result.stdout)
+        self.assertIn("0.1.1", result.stdout)
 
 
 if __name__ == "__main__":

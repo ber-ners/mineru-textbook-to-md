@@ -1,6 +1,6 @@
 ---
 name: mineru-textbook-to-md
-description: Parse a structured PDF with MinerU, preserve Markdown and images, split it into reviewable sections, and create mapping and quality reports. Use when Codex needs to convert a PDF to Markdown, split existing MinerU full.md output, repair document boundaries, or prepare image-preserving Markdown.
+description: Convert authorized textbook PDFs or existing MinerU full.md files into ordered, image-preserving Markdown packages using PDF bookmarks, semantic chunk planning, chapter splitting, and quality reports. Use when an agent needs to process a textbook, resume MinerU work, repair chapter boundaries, or prepare reviewable Markdown without hard-coded paths.
 ---
 
 # MinerU Structured PDF to MD
@@ -43,17 +43,17 @@ Before uploading to MinerU, read the PDF bookmarks locally and create an ordered
 
 ## Run the CLI
 
-Install dependencies in a new environment:
+Install the Skill's small runtime dependencies in the environment used for the task:
 
 ```powershell
 $env:PYTHONUTF8 = "1"
-python -m pip install "<skill>"
+python -m pip install -r "<skill-root>\requirements.txt"
 ```
 
 Write next to the source PDF:
 
 ```powershell
-python -m mineru_textbook_to_md `
+python "<skill-root>\scripts\run.py" `
   --pdf "<pdf>" --base-name "<title>" --split-by auto
 ```
 
@@ -62,7 +62,7 @@ The default upload path performs local bookmark preflight and writes the semanti
 Plan without upload first:
 
 ```powershell
-python -m mineru_textbook_to_md `
+python "<skill-root>\scripts\run.py" `
   --pdf "<pdf>" --base-name "<title>" --plan-only
 ```
 
@@ -73,7 +73,7 @@ only for a deliberate, documented manual repair.
 Split an existing result without uploading:
 
 ```powershell
-python -m mineru_textbook_to_md `
+python "<skill-root>\scripts\run.py" `
   --from-full-md "<full.md-or-folder>" --page-count <pages> --dry-run
 ```
 
