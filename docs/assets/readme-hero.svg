@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">从一本 PDF，到每一章。</title>
+  <desc id="desc">输出示意，非实际转换截图：原始教材 PDF 经过书签规划、MinerU 解析和结构对齐，生成按章排列的 Markdown、章节图片、质量报告与人工复核清单。</desc>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="m0 0 10 5-10 5" fill="none" stroke="#ff855b" stroke-width="2"/></marker>
+  </defs>
+  <rect width="1600" height="960" rx="28" fill="#111b23"/>
+  <rect width="1600" height="960" rx="28" fill="url(#grid)"/>
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif">
+    <rect x="64" y="58" width="12" height="30" rx="3" fill="#ff855b"/>
+    <text x="94" y="82" fill="#eef0e9" font-size="28" font-weight="700">MINERU / TEXTBOOK TO MARKDOWN</text>
+    <rect x="1350" y="54" width="186" height="42" rx="21" fill="#263c3e"/>
+    <text x="1443" y="82" fill="#9edbc9" text-anchor="middle" font-size="20" font-weight="600">AGENT SKILL</text>
+    <text x="60" y="197" fill="#f5f3e9" font-size="82" font-weight="800" letter-spacing="-3">从一本 PDF，<tspan fill="#ff855b">到每一章。</tspan></text>
+    <text x="66" y="249" fill="#b6c3c5" font-size="27">保留图文 · 按章组织 · 附带质量报告与复核清单</text>
+    <text x="66" y="329" fill="#a5b6ba" font-size="19" letter-spacing="3">01 / INPUT</text>
+    <text x="453" y="329" fill="#a5b6ba" font-size="19" letter-spacing="3">02 / TRANSFORM</text>
+    <text x="824" y="329" fill="#a5b6ba" font-size="19" letter-spacing="3">03 / OUTPUT</text>
+    <rect x="92" y="384" width="278" height="370" rx="16" fill="#344447" transform="rotate(6 231 569)"/>
+    <rect x="80" y="373" width="278" height="370" rx="16" fill="#7f9490" transform="rotate(-4 219 558)"/>
+    <rect x="66" y="363" width="278" height="370" rx="16" fill="#f5f0e2"/>
+    <rect x="66" y="363" width="278" height="10" rx="5" fill="#ff855b"/>
+    <text x="94" y="421" fill="#b65231" font-size="19" font-weight="700">SOURCE / PDF</text>
+    <text x="94" y="474" fill="#17282e" font-size="35" font-weight="800">教材原文</text>
+    <path d="M94 502h218M94 521h191M94 540h211" stroke="#b9bcb0" stroke-width="6"/>
+    <rect x="94" y="569" width="96" height="89" rx="6" fill="#dbe5d9"/>
+    <circle cx="142" cy="604" r="14" fill="none" stroke="#5f8b7f" stroke-width="3"/>
+    <path d="M116 639l17-18 14 10 17-22" fill="none" stroke="#5f8b7f" stroke-width="3"/>
+    <path d="M209 580h103M209 600h91M209 620h103M209 640h76M94 689h218" stroke="#b9bcb0" stroke-width="6"/>
+    <text x="66" y="803" fill="#f5f3e9" font-size="25" font-weight="600">一本书，图文与层级交织</text>
+    <text x="66" y="841" fill="#9bafb3" font-size="21">从原始 PDF 或已有 full.md 开始</text>
+    <path d="M409 409h340" fill="none" stroke="#ff855b" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(453 458)">
+      <circle cx="18" cy="0" r="18" fill="#ff855b"/>
+      <text x="18" y="7" text-anchor="middle" fill="#18262b" font-size="20" font-weight="800">1</text>
+      <text x="52" y="8" fill="#f5f3e9" font-size="28" font-weight="700">沿书签规划</text>
+      <text x="52" y="44" fill="#9bafb3" font-size="21">优先按章节边界分块</text>
+      <path d="M18 30v45" stroke="#3f575b" stroke-width="2"/>
+      <circle cx="18" cy="105" r="18" fill="#ff855b"/>
+      <text x="18" y="112" text-anchor="middle" fill="#18262b" font-size="20" font-weight="800">2</text>
+      <text x="52" y="113" fill="#f5f3e9" font-size="28" font-weight="700">由 MinerU 解析</text>
+      <text x="52" y="149" fill="#9bafb3" font-size="21">复用已完成的分块结果</text>
+      <path d="M18 135v45" stroke="#3f575b" stroke-width="2"/>
+      <circle cx="18" cy="210" r="18" fill="#ff855b"/>
+      <text x="18" y="217" text-anchor="middle" fill="#18262b" font-size="20" font-weight="800">3</text>
+      <text x="52" y="218" fill="#f5f3e9" font-size="28" font-weight="700">对齐并拆分</text>
+      <text x="52" y="254" fill="#9bafb3" font-size="21">关联目录、正文与图片</text>
+    </g>
+    <rect x="453" y="782" width="287" height="64" rx="12" fill="#263c3e"/>
+    <text x="596" y="823" text-anchor="middle" fill="#a7e1cf" font-size="23">可先预览，再执行</text>
+    <rect x="824" y="363" width="712" height="483" rx="18" fill="#f5f0e2"/>
+    <path d="M824 381q0-18 18-18h676q18 0 18 18v44H824Z" fill="#e5dfd0"/>
+    <circle cx="853" cy="395" r="6" fill="#c4795e"/><circle cx="875" cy="395" r="6" fill="#c3ac75"/><circle cx="897" cy="395" r="6" fill="#84a08d"/>
+    <text x="931" y="403" fill="#50635f" font-size="20" font-weight="600">教材 / Markdown 文档包</text>
+    <path d="M869 464h18l8 8h25v23h-51Z" fill="#cb6a44"/>
+    <text x="935" y="490" fill="#20362f" font-size="27" font-weight="700">01-第一篇 基础知识 /</text>
+    <path d="M888 518v132m0-114h25m-25 57h25m-25 57h25" fill="none" stroke="#b8bfb0" stroke-width="2"/>
+    <rect x="922" y="515" width="578" height="43" rx="7" fill="#e0e5d6"/>
+    <text x="936" y="545" fill="#344e42" font-size="23">01-第一章 绪论 /</text>
+    <text x="936" y="602" fill="#344e42" font-size="23">02-第二章 基本概念 /</text>
+    <text x="936" y="659" fill="#344e42" font-size="23">03-第三章 … /</text>
+    <path d="M857 685h646" stroke="#d8d4c5"/>
+    <rect x="853" y="711" width="310" height="42" rx="7" fill="#dde8db"/>
+    <text x="871" y="740" fill="#365d49" font-size="22" font-weight="600">MD</text>
+    <text x="922" y="740" fill="#365d49" font-size="22">01-原文解析.md</text>
+    <rect x="1176" y="711" width="327" height="42" rx="7" fill="#dde8db"/>
+    <text x="1195" y="740" fill="#365d49" font-size="22">images/ 本章引用图片</text>
+    <rect x="853" y="772" width="650" height="49" rx="8" fill="#f2dfcc"/>
+    <text x="872" y="804" fill="#995331" font-size="22">质量报告 + 人工复核清单 → 定位需要检查的内容</text>
+    <path d="M64 885h1472" stroke="#31444a"/>
+    <text x="66" y="926" fill="#b6c3c5" font-size="21">有序的章节 / 独立的图文 / 可追溯的边界</text>
+    <text x="1536" y="926" text-anchor="end" fill="#84999f" font-size="18">输出示意 · 非实际转换截图</text>
+  </g>
+</svg>
